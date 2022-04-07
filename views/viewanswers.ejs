@@ -4,10 +4,11 @@
     <h1>Bekijk antwoorden</h1>
     <p>Bekijk de stats die anderen ingevuld hebben</p>
 
-    <% data.forEach(pollList => { %>
-    <h2><%= pollVotesA %></h2>
-    <h2><%= pollVotesB %></h2>
+<h2>Hoeveelheid die antwoord A koos</h2>
+    <p><%= hoeveelheidA %></p>
 
-    <% }); %>
+    <h2>Hoeveelheid die antwoord B koos</h2>
+    <p><%= hoeveelheidB %></p>
+
 
     <%- include ('./partials/footer.ejs') %>

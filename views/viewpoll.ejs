@@ -11,18 +11,18 @@
 
 <% data.forEach(pollList => { %>
  
-<h2><%= pollList.vraag %></h2>
 
-<form method="post" enctype="application/x-www-form-urlencoded" action="/<%- pollList.id %>">
-    <fieldset>
-    <input type="radio" id="<%= pollList.antwoordA %>" name="answer" value="<%= pollList.antwoordA %>">
+
+<form method="post" enctype="application/x-www-form-urlencoded" action="/<%- pollList.id %>" class="border">
+    <h2><%= pollList.vraag %></h2>
+    
+    <input type="radio" id="<%= pollList.antwoordA %>" name="answer" value="<%= pollList.antwoordA %>"required>
     <label class="inline" for="<%= pollList.antwoordA %>"><%= pollList.antwoordA %></label>
 
-    <input  type="radio" id="<%= pollList.antwoordB %>" name="answer" value="<%= pollList.antwoordB %>">
+    <input  type="radio" id="<%= pollList.antwoordB %>" name="answer" value="<%= pollList.antwoordB %>"required>
     <label class="inline" for="<%= pollList.antwoordB %>"><%= pollList.antwoordB %></label>
 
     <input type="submit" value="versturen" />
-</fieldset>
 </form>
 <% }); %>
 
