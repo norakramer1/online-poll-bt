@@ -3,11 +3,13 @@
 <%- include ('./partials/head.ejs') %>
 <%- include ('./partials/nav.ejs') %>
 
-<h1>Bekijk polls</h1>
+
+
+
+<section>
+
+    <h1>Bekijk polls</h1>
 <p>Bekijk de polls die de admin gepost heeft en vul ze in</p>
-
-
-
 
 <% data.forEach(pollList => { %>
  
@@ -25,5 +27,7 @@
     <input type="submit" value="versturen" />
 </form>
 <% }); %>
+
+</section>
 
 <%- include ('./partials/footer.ejs') %>

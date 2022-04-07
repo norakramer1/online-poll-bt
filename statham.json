@@ -1,13 +1,9 @@
 [
   {
-    "id": "553d7501-83ff-4ff0-8a14-4db2cdbda91b",
+    "id": "c1ecbc49-70bc-4581-9d37-896c07745d2d",
     "vraag": "wat vind je van Browser technologies",
-    "antwoordA": "super leuk",
-    "antwoordB": "janken",
-    "votes": [
-      "super leuk",
-      "super leuk",
-      "janken"
-    ]
+    "antwoordA": "ja leuk",
+    "antwoordB": "janken dit",
+    "votes": []
   }
 ]

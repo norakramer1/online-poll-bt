@@ -2,24 +2,27 @@
 <%- include ('./partials/head.ejs') %>
 <%- include ('./partials/nav.ejs') %>
 
+<section>
+
+
     <h1>Maak een nieuwe poll</h1>
     <p>Maak een nieuwe poll zodat studenten deze gelijk in kunnen vullen</p>
 
-<body>
-
 <form method="post" enctype="application/x-www-form-urlencoded" action="/makepoll">
     <label for="vraag">Vraag:</label>
-    <input type="text" id="vraag" name="vraag" placeholder="Vraag">
+    <input type="text" id="vraag" name="vraag" placeholder="Vraag" required>
 
     <label for="antwoordB">Antwoord A:</label>
-    <input type="text" id="antwoordA" name="antwoordA" placeholder="Eerste antwoord">
+    <input type="text" id="antwoordA" name="antwoordA" placeholder="Eerste antwoord" required>
 
     <label for="antwoordB">Antwoord B:</label>
-    <input type="text" id="antwoordB" name="antwoordB" placeholder="Tweede antwoord">
+    <input type="text" id="antwoordB" name="antwoordB" placeholder="Tweede antwoord" required>
 
 
 	<input type="submit" value="versturen" />
 </form>
-</body>
+
+</section>
+
 
 <%- include ('./partials/footer.ejs') %>
