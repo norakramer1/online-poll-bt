@@ -1,0 +1,29 @@
+
+
+<%- include ('./partials/head.ejs') %>
+<%- include ('./partials/nav.ejs') %>
+
+<h1>Bekijk polls</h1>
+<p>Bekijk de polls die de admin gepost heeft en vul ze in</p>
+
+
+
+
+<% data.forEach(pollList => { %>
+ 
+<h2><%= pollList.vraag %></h2>
+
+<form method="post" enctype="application/x-www-form-urlencoded" action="/<%- pollList.id %>">
+    <fieldset>
+    <input type="radio" id="<%= pollList.antwoordA %>" name="answer" value="<%= pollList.antwoordA %>">
+    <label class="inline" for="<%= pollList.antwoordA %>"><%= pollList.antwoordA %></label>
+
+    <input  type="radio" id="<%= pollList.antwoordB %>" name="answer" value="<%= pollList.antwoordB %>">
+    <label class="inline" for="<%= pollList.antwoordB %>"><%= pollList.antwoordB %></label>
+
+    <input type="submit" value="versturen" />
+</fieldset>
+</form>
+<% }); %>
+
+<%- include ('./partials/footer.ejs') %>

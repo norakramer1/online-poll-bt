@@ -1,0 +1,13 @@
+<%- include ('./partials/head.ejs') %>
+<%- include ('./partials/nav.ejs') %>
+
+    <h1>Bekijk antwoorden</h1>
+    <p>Bekijk de stats die anderen ingevuld hebben</p>
+
+    <% data.forEach(pollList => { %>
+    <h2><%= pollVotesA %></h2>
+    <h2><%= pollVotesB %></h2>
+
+    <% }); %>
+
+    <%- include ('./partials/footer.ejs') %>
