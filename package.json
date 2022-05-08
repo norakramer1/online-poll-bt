@@ -1,29 +1,27 @@
 {
   "name": "eindopdracht",
   "version": "1.0.0",
-  "description": "browser technologies eindoprdr",
+  "description": "browser technologies",
   "main": "app.js",
   "scripts": {
     "test": "test",
-    "start": "nodemon app.js"
+    "start": "app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/norakramer1/browser-technologies-2122.git"
+    "url": "git+https://github.com/norakramer1/online-poll-bt.git"
   },
   "author": "nora kramer",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/norakramer1/browser-technologies-2122/issues"
+    "url": "https://github.com/norakramer1/online-poll-bt/issues"
   },
-  "homepage": "https://github.com/norakramer1/browser-technologies-2122#readme",
+  "homepage": "https://github.com/norakramer1/online-poll-bt#readme",
   "dependencies": {
     "body-parser": "^1.19.2",
     "ejs": "^3.1.6",
     "express": "^4.17.3",
-    "uuid": "^8.3.2"
-  },
-  "devDependencies": {
+    "uuid": "^8.3.2",
     "nodemon": "^2.0.15"
   }
 }

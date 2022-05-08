@@ -1,6 +1,6 @@
 const http = require('http');
 const hostname = '127.0.0.1';
-const port = 5500;
+const port = process.env.PORT || 7000;
  // let ejs = require('ejs');
 const bodyParser = require('body-parser');
 const {v4: uuidv4 } = require('uuid');
@@ -38,6 +38,7 @@ app.get("/makepoll", (req, res) => {
 });
 
 let voteAnswers = [];
+let removeAnswers = [];
 // get form data and post to json file, then render viewpoll view
 app.post("/makepoll", (req, res) => {
   fs.readFile("statham.json", "utf8", (err, data) => {
@@ -48,6 +49,7 @@ app.post("/makepoll", (req, res) => {
       antwoordA: req.body.antwoordA,
       antwoordB: req.body.antwoordB,
       votes: voteAnswers,
+      remove: removeAnswers,
     };
     pollList.push(arr);
     let pollSubmit = JSON.stringify(pollList, null, 2);
@@ -75,7 +77,7 @@ app.get("/viewpoll", (req, res) => {
 
 let pollVotesA;
 let pollVotesB;
-
+// let removeItem;
 //take poll answers and put results in json file, then render viewanswers
 app.post("/:id", (req, res) => {
   voteAnswers.push(req.body.answer)
@@ -88,6 +90,7 @@ app.post("/:id", (req, res) => {
         item.votes.push(req.body.answer);
     pollVotesA = item.votes.filter(vote => vote === item.antwoordA).length;
     pollVotesB = item.votes.filter(vote => vote === item.antwoordB).length;
+    // removeItem = item.remove.filter(remove => remove === item.remove).length;
     // console.log(pollVotesA, pollVotesB)
       }
     })
@@ -114,6 +117,29 @@ app.get("/viewanswers", (req, res) => {
   });
 });
 
+
+// delete polls on view poll page
+// app.get("/delete", (req, res) => {
+//   // voteAnswers.push(req.body.answer)
+//   fs.readFile("statham.json", "utf8", (err, data) => {
+//     let polls = JSON.parse(data);
+ 
+// // console.log(removePoll)
+// let removeItem = polls.filter(poll => poll.id !== "29d36f13-e19a-4882-92a6-619ae48b7da3");
+// console.log(removeItem)
+
+// pollRemove.forEach(item => {
+//   if (item.id === req.params.id) {
+//     item.votes.push(req.body.answer);
+// pollVotesA = item.votes.filter(vote => vote === item.antwoordA).length;
+// pollVotesB = item.votes.filter(vote => vote === item.antwoordB).length;
+// // console.log(pollVotesA, pollVotesB)
+//   }
+// })
+
+// // console.log(req.body.delete)
+//   });
+// });
 
 // listen to the port
 app.listen(port, () => {

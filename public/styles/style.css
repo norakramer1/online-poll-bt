@@ -2,82 +2,93 @@
  #384d48
  #d1462f */
 
- * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0; 
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
 }
-
-@font-face {
-   font-family: Basteleur-Bold;
-   src: url("Basteleur-Bold.otf"); /* IE9 Compat Modes */
-   src: local('otf/Basteleur-Bold'), format('truetype');
-}
-
-@font-face {
-   font-family: SpaceMono-Regular;
-   src: url("SpaceMono-Regular.ttf"); /* IE9 Compat Modes */
-   src: local('fonts/SpaceMono-Regular.ttf'), format('truetype');
-}
-
-
 
 html {
    background-color: #ece2d0;
 }
 
 body {
-   height: 100vh;
+   height: 100%;
 }
 
-body.darkmode h1,body.darkmode h2, body.darkmode h3, body.darkmode a, body.darkmode p, body.darkmode label {
+body.darkmode h1,
+body.darkmode h2,
+body.darkmode h3,
+body.darkmode a,
+body.darkmode p,
+body.darkmode label {
    color: #ece2d0;
+
+}
+
+body.darkmode p {
+   border-bottom: 1px solid #ece2d0;
 }
 
 body.darkmode article {
    border: 2px solid #ece2d0;
 }
 
-h1, h2, h3 {
-   font-family: Basteleur-Bold;
- 
+body.darkmode div.drop-zone {
+   border: 5px dashed #ece2d0;
+
+}
+
+body.darkmode img 
+
+body.darkmode nav ul:last-child button, body.darkmode input[type='submit'] {
+   color: #ece2d0;
+   background-color: rgb(22, 22, 22);
+   border: 2px solid #ece2d0;
+}
+
+h1,
+h2,
+h3 {
+   font-family: 'Source Serif Pro', serif;
    color: #384d48;
 }
 
 h1 {
-   font-size: 300%;
+   font-size: 5vw;
 }
 
-h2 {
-
-   font-size: 150%;
-}
-
-h3 {
-   font-size: 100%; 
-   text-decoration: none; 
+a h3 {
+   text-decoration: none;
    font-family: 'Space Mono', monospace;
+}
+
+
+a {
+   text-decoration: none;
 }
 
 section:first-of-type {
    padding-right: 20%;
 }
 
-p, a {
+p,
+a {
    font-family: 'Space Mono', monospace;
-   font-size: 150%;
-  
+   font-size: 2vw;
    color: #384d48;
 }
 
 p {
-   font-size: 200%;
+   font-size: 2vw;
    max-width: 70%;
+   padding-bottom: 2%;
+   border-bottom: 2px solid #384d48;
 }
 
 a {
-   color: #384d48;  
-   font-size: 100%; 
+   color: #384d48;
+   font-size: 2vw;
 }
 
 nav ul {
@@ -88,10 +99,10 @@ nav ul {
    padding: 3% 0 3% 0;
 }
 
-nav ul li  {
+nav ul li {
    padding-right: 5%;
    list-style-type: none;
-   font-family: SpaceMono-Regular, monospace; 
+   font-family: 'Space Mono', monospace;
    color: #384d48;
 
 }
@@ -111,19 +122,23 @@ nav ul:last-child button {
    border: none;
    margin-top: 2%;
    cursor: pointer;
-   font-family: SpaceMono-Regular, monospace; 
+   font-family: 'Space Mono', monospace;
 }
 
 nav ul:last-child button:hover {
    background-color: #ece2d0;
    border: 2px solid #384d48;
-   padding: 8px;
+   padding: 8px; 
    color: #384d48;
 }
 
-input[type=submit]{
-   font-family: SpaceMono-Regular, monospace;;
+input[type=submit] {
+   /* to style submit button in form on safari*/
+   -webkit-appearance: none;
+   border-radius: 0%;
+   font-family: 'Space Mono', monospace;
    cursor: pointer;
+   display: block;
    border: none;
    margin-top: 3%;
    background-color: #384d48;
@@ -140,15 +155,25 @@ input[type=submit]:hover {
 
 section:nth-of-type(2) {
    display: flex;
-   flex-wrap: wrap;
+   flex-wrap: nowrap;
    justify-content: center;
+   align-items: center;
+   max-width: 100%;
+}
+
+section:nth-of-type(2) div:first-of-type {
+   width: 70%;
+}
+
+section form {
+   width: 60%;
 }
 
 article {
    text-align: center;
-   margin: 2% 2% 0;
+   margin: 2% 2% 2%;
    padding: 5% 2% 5% 2%;
-   width: 30%;
+   width: 35%;
    border: 2px solid #384d48;
 }
 
@@ -157,19 +182,21 @@ article:hover {
    color: #ece2d0;
 }
 
-article:hover h2, article:hover h3, article:hover p {
+article:hover h2,
+article:hover h3,
+article:hover p {
    color: #ece2d0;
 }
 
 label {
-   font-family: SpaceMono-Regular, monospace;
+   font-family: 'Space Mono', monospace;
    color: #384d48;
    padding: 1% 0 1% 0;
    display: block;
 }
 
 label.inline {
-display: inline;
+   display: inline;
 }
 
 input::placeholder {
@@ -177,80 +204,93 @@ input::placeholder {
 }
 
 input[type=text] {
-   font-family: SpaceMono-Regular, monospace; 
+   font-family: 'Space Mono', monospace;
    background-color: #ece2d0;
    padding: 20px 0 20px 10px;
-   width: 400px;
+   width: 60%;
    border: 2px solid #384d48;
-   /* max-width: 80%; */
 }
 
 form {
    padding-top: 5%;
+
 }
 
 form.border {
    border: 2px solid #384d48;
    margin: 2% 2% 0;
-   padding: 2%;
+   padding: 4%;
+   cursor: move;
+}
 
+form.border:last-of-type {
+   margin-bottom: 5%;
 }
 
 body.darkmode {
-background-color: rgb(22, 22, 22);
+   background-color: rgb(22, 22, 22);
+   height: 110vh;
+
 }
-
-@media only screen and (max-width: 1300px) {
-   h1 {
-       font-size: 300%;
-   }
-
-   p {
-       font-size: 120%;
-   }
-
-   form {
-       max-width: 30%;
-   }
- }
-
- @media only screen and (max-width: 900px) {
-   h1 {
-       font-size: 400%;
-   }
- }
-
- @media only screen and (max-width: 700px) {
-   h1 {
-       font-size: 300%;
-   }
-
-   form {
-       max-width: 60%;
+@supports (display: grid) {
+div.drop-zone {
+   border: 5px dashed #384d48;
+   height: 200px;
+   width: 200px;
+   display: grid;
+   place-content: center;
    }
 }
 
-   @media only screen and (max-width: 500px) {
-       h1 {
-           font-size: 300%;
-       }
-       p {
-           font-size: 110%;
-           max-width: 100%;
-        
-     }
+@supports not (display:grid) {
+   div.drop-zone{
+      border: 5px dashed #384d48;
+      height: 200px;
+      width: 200px;
+      display: flex;
+      place-content: center;  
    }
-@media only screen and (max-width: 400px) {
-       h1 {
-           font-size: 150%;
-       }
-
-   p {
-       font-size: 100%;
-    
- }
-
- form {
-   max-width: 90%;
 }
+
+ div img {
+   height: 100px;
+   width: 100px;
+}
+
+
+.draggables.dragging {
+   opacity: .5;
+}
+
+@media only screen and (max-width: 800px) {
+
+   section:first-of-type form {
+      width: 100%;
+   }
+
+   input[type=text] {
+      width: 80%;
+      margin: 1% 1% 0;
+      padding: 10px 0 10px 5px;
+   }
+
+   section:nth-of-type(2) {
+      flex-direction: column;
+   }
+
+   section:nth-of-type(2) div:first-of-type {
+      width: 100%;
+      margin: 0 0 2% 0;
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+
+   div.drop-zone {
+      display: none;
+   }
+
+   section.home {
+      flex-direction: row;
+   } 
 }

@@ -1,9 +1,23 @@
 [
   {
-    "id": "c1ecbc49-70bc-4581-9d37-896c07745d2d",
+    "id": "12eb6175-7793-45b5-91d8-d463317c03bf",
     "vraag": "wat vind je van Browser technologies",
-    "antwoordA": "ja leuk",
-    "antwoordB": "janken dit",
-    "votes": []
+    "antwoordA": "moeilijk",
+    "antwoordB": "moeilijker",
+    "votes": [
+      "moeilijker"
+    ],
+    "remove": []
+  },
+  {
+    "id": "186f4e19-616a-4e8a-ae93-ffa2899b6d6e",
+    "vraag": "ben je klaar om dit vak af te ronden?",
+    "antwoordA": "ja pls",
+    "antwoordB": "nee helaas",
+    "votes": [
+      "nee helaas",
+      "nee helaas"
+    ],
+    "remove": []
   }
 ]
