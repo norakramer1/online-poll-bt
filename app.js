@@ -1,10 +1,6 @@
 const http = require('http');
 const hostname = '127.0.0.1';
-<<<<<<< HEAD
-const port = process.env.PORT || 7000;
-=======
 const port = process.env.PORT || 5500;
->>>>>>> fd08085a38bce651f9153af4d6f2cc21ee637108
  // let ejs = require('ejs');
 const bodyParser = require('body-parser');
 const {v4: uuidv4 } = require('uuid');
