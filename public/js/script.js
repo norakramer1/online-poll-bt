@@ -5,7 +5,7 @@ const trashImg = document.querySelector('img');
 
 
 function darkMode() {
-    if (buttonEl.innerHTML == 'Make lightmode') {
+    if (buttonEl.innerHTML == 'Make lightmode' || trashImg) {
         buttonEl.innerHTML = 'Make darkmode';
         trashImg.src = "img/trash.png";
     } else {
