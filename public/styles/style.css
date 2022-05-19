@@ -16,6 +16,12 @@ body {
    height: 100%;
 }
 
+body.darkmode {
+   background-color: rgb(22, 22, 22);
+   height: 100%;
+
+}
+
 body.darkmode h1,
 body.darkmode h2,
 body.darkmode h3,
@@ -39,13 +45,28 @@ body.darkmode div.drop-zone {
 
 }
 
-body.darkmode img 
+
 
 body.darkmode nav ul:last-child button, body.darkmode input[type='submit'] {
    color: #ece2d0;
    background-color: rgb(22, 22, 22);
    border: 2px solid #ece2d0;
 }
+
+body.darkmode form.border {
+   border: 2px solid #ece2d0;
+}
+
+body.darkmode input[type=text] {
+   background-color: rgb(22, 22, 22);
+   border: 2px solid #ece2d0;
+ 
+} 
+
+body.darkmode input[type=text]::placeholder {
+   color: #ece2d076;
+}
+
 
 h1,
 h2,
@@ -58,9 +79,14 @@ h1 {
    font-size: 5vw;
 }
 
+h2 {
+   padding-bottom: 3%;
+}
+
 a h3 {
    text-decoration: none;
    font-family: 'Space Mono', monospace;
+   font-size: 2vw;
 }
 
 
@@ -196,7 +222,8 @@ label {
 }
 
 label.inline {
-   display: inline;
+display: inline;
+   padding: 0 10% 5% 0;
 }
 
 input::placeholder {
@@ -227,11 +254,14 @@ form.border:last-of-type {
    margin-bottom: 5%;
 }
 
-body.darkmode {
-   background-color: rgb(22, 22, 22);
-   height: 110vh;
+
+input[type=radio] {
+   border: 2px solid #384d48;
+   accent-color: #384d48;
+  
 
 }
+
 @supports (display: grid) {
 div.drop-zone {
    border: 5px dashed #384d48;
@@ -239,6 +269,8 @@ div.drop-zone {
    width: 200px;
    display: grid;
    place-content: center;
+   justify-items: center;
+
    }
 }
 
@@ -249,17 +281,19 @@ div.drop-zone {
       width: 200px;
       display: flex;
       place-content: center;  
+      justify-content: center;
    }
-}
-
- div img {
-   height: 100px;
-   width: 100px;
 }
 
 
 .draggables.dragging {
    opacity: .5;
+}
+
+div.drop-zone p {
+   text-align: center;
+  border: none;
+  font-size: 1.5vw;
 }
 
 @media only screen and (max-width: 800px) {
