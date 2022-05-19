@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "test",
-    "start": "nodemon app.js"
+    "start": "app.js"
   },
   "repository": {
     "type": "git",
@@ -21,9 +21,7 @@
     "body-parser": "^1.19.2",
     "ejs": "^3.1.6",
     "express": "^4.17.3",
-    "uuid": "^8.3.2"
-  },
-  "devDependencies": {
+    "uuid": "^8.3.2",
     "nodemon": "^2.0.15"
   }
 }
